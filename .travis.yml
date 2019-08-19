@@ -3,7 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t reboxyz/react-test1 -f ./client/Dockerfile.dev ./client
+  - docker build -t reboxyz/react -f "./client/Dockerfile.dev" ./client
+  
 
 script:
   - docker run -e CI=true reboxyz/react-test1 npm test
