@@ -5,7 +5,6 @@ services:
 before_install:
   - docker build -t reboxyz/react -f './client/Dockerfile.dev' ./client
   
-
 script:
   - docker run -e CI=true reboxyz/react-test1 npm test
 
